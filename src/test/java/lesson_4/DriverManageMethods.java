@@ -22,5 +22,8 @@ public class DriverManageMethods {
         // 5. Sayfanın durumunu maximize durumda yazdır
         System.out.println("2. Durum Sayfanın konumu: " + driver.manage().window().getPosition());
         System.out.println("2. Durum Sayfanın boyutları: " + driver.manage().window().getSize());
+
+
+        driver.close();
     }
 }
