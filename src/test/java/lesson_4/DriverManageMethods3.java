@@ -16,6 +16,25 @@ public class DriverManageMethods3 {
         System.out.println("Sayfanın konumu: " + driver.manage().window().getPosition());
         System.out.println("Sayfanın boyutu: " + driver.manage().window().getSize());
         // 3. sayfanın istediğimiz konum ve boyuta gelmesi
+        driver.manage().window().setPosition(new Point(0,0));
+        driver.manage().window().setSize(new Dimension(600,600));
+        // 4. sayfa istediğimiz konuma geldi mi test edelim
+        int xKor = driver.manage().window().getPosition().getX();
+        int yKor = driver.manage().window().getPosition().getY();
+        int wight = driver.manage().window().getSize().getWidth();
+        int height = driver.manage().window().getSize().getHeight();
+        if (xKor == 0 && yKor == 0){
+            System.out.println("Sayfa doğru konumda bulunmaktadır...");
+        } else {
+            System.out.println("Konum yanlış kontrol ediniz.....");
+        }
+
+        if (wight == 600 && height == 600){
+            System.out.println("Sayfa doğru boyutlardadır.");
+        } else {
+            System.out.println("Sayfa boyutu yanlıştır Tekrar kontrol ediniz....");
+        }
+
 
     }
 }
