@@ -35,6 +35,7 @@ public class DriverManageMethods3 {
             System.out.println("Sayfa boyutu yanlıştır Tekrar kontrol ediniz....");
         }
 
-
+        driver.wait(2000);
+        driver.close();
     }
 }
