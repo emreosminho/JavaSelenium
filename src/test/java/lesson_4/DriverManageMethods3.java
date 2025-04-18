@@ -12,6 +12,10 @@ public class DriverManageMethods3 {
 
         // 1.Amazon sayfasına gidelim
         driver.get("https://www.amazon.com/");
+        // 2. sayfanın konumuu ve boyutlarını al
+        System.out.println("Sayfanın konumu: " + driver.manage().window().getPosition());
+        System.out.println("Sayfanın boyutu: " + driver.manage().window().getSize());
+        // 3. sayfanın istediğimiz konum ve boyuta gelmesi
 
     }
 }
