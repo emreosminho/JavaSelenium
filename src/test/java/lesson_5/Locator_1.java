@@ -20,6 +20,14 @@ public class Locator_1 {
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone 11");
         driver.findElement(By.id("nav-search-submit-button")).click();
 
+        // arama sonucu iphone 11 içeriyor mu kontrol et
+        String sonuc = driver.findElement(By.xpath("(//div[@class=\"sg-col-inner\"]/h2/span)[3]")).getText();
+        if (sonuc.contains("iphone 11")){
+            System.out.println("Arama Sonucu Doğrudur...");
+        } else {
+            System.out.println("Arama sonucu yanlış tekrar deneyiniz...");
+        }
+
 
 
     }
