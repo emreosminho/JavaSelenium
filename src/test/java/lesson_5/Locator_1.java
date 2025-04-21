@@ -16,6 +16,10 @@ public class Locator_1 {
         // Çerezleri kabul et
         driver.findElement(By.id(    "sp-cc-accept")).click();
 
+        // Arama butonuna iphone 11 yaz ve arama  işlemini yap
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone 11");
+        driver.findElement(By.id("nav-search-submit-button")).click();
+
 
 
     }
