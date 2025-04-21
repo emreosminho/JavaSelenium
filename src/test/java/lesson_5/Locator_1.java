@@ -28,7 +28,12 @@ public class Locator_1 {
             System.out.println("Arama sonucu yanlış tekrar deneyiniz...");
         }
 
+        // İlk ürünün fiyatını console yazdır
+        System.out.println("İlk Ürün Fiyatı: " + driver.findElement(By.xpath("(//span[@class=\"a-price-whole\"])[1]")).getText());
 
+        // 2 sn bekle browser kapat
+        Thread.sleep(2000);
+        driver.close();
 
     }
 }
