@@ -19,7 +19,9 @@ public class Locators_2 {
         String sonucSayisi = driver.findElement(By.xpath("//div[@class=\"sg-col-inner\"]/h2/span")).getText();
         System.out.println(sonucSayisi);
 
-        Thread.sleep(3000);
-        driver.close();
+        // Sonuclardan ilk resme tıkla
+        WebElement firstPicture = driver.findElement(By.xpath("(//div[@class=\"a-section aok-relative s-image-square-aspect\"]/img)[1]"));
+        firstPicture.click();
+
     }
 }
