@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.locators.RelativeLocator;
 
 public class RelativeLocators {
     public static void main(String[] args) {
@@ -16,6 +17,13 @@ public class RelativeLocators {
         WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
         searchBox.sendKeys("iphone 11");
         WebElement searchButton = driver.findElement(By.id("nav-search-submit-button"));
-        searchBox.click();
+        searchButton.click();
+
+        WebElement berlinPhoto = driver.findElement(By.id(""));
+        WebElement bostonPhoto = driver.findElement(By.id(""));
+        WebElement istanbulPhoto = driver.findElement(By.id(""));
+
+        WebElement ankaraPhoto = driver.findElement(RelativeLocator.with(By.tagName("img")).toRightOf(bostonPhoto));
+        WebElement trabzonPhoto = driver.findElement(RelativeLocator.with(By.tagName("img")).toLeftOf(berlinPhoto));
     }
 }
